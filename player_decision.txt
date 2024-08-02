@@ -1,0 +1,1 @@
+["use", "move_down", "search", "move_up", "search", "move_left", "search", "move_right", "search", "rest"]

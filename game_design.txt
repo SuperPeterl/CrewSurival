@@ -1,0 +1,92 @@
+Requirements Specification
+1. Overview
+The goal is to create a 2D top-down survival game using Pygame where each pixel represents 100 meters. The player navigates through a post-apocalyptic world, scavenging for supplies, Choices made throughout the game influence the storyline and potential outcomes.
+
+2. Game Mechanics
+2.1. Player and Environment
+Player Control: Move the player character using mouse clicks.
+Player action to things using mouse click when get close
+Combat: Engage in tactical combat with mutants, raiders, and other survivors. in text turn base 
+Resource Management: Manage food, water and energy and, and other supplies to survive.
+
+2.2. Exploration and Interaction
+Scavenging: Search abandoned buildings, vehicles, and wilderness for supplies like food, water, weapons, and equipment.
+Biomes: Encounter diverse environments such as ruined cities, wastelands, forests, and underground bunkers, each with unique challenges and resources.
+Weather: Dynamic weather patterns affect visibility, movement speed, and resource availability.
+Wildlife: Interact with animals for food or as potential threats.
+
+2.3. Narrative and Choices
+Story-driven: Follow a storyline that unfolds based on player decisions and actions.
+Branching Choices: Choices made impact the game's narrative, alliances, and potential endings.
+Discovery: Find artifacts, valuable items, and clues about the apocalypse and potential ways to restore civilization.
+
+3. Game Environment
+Map Size: 1600x960 pixels (80,000 meters by 60,000 meters).
+Background: Reflects a post-apocalyptic setting with ruined cities, barren wastelands, overgrown forests, etc.
+Dynamic Elements: Changing weather patterns, day-night cycles, and wildlife behavior
+
+4. User Interface
+Main Screen: Displays the game world, player character, base, resources, inventory, and game time.
+Text and Visual Feedback: Provides feedback on player stats, choices, and game progression.
+Font: Default Pygame font for displaying text.
+
+5. Technical Requirements
+Language: Python 3.x
+Library: Pygame
+Frame Rate: 60 FPS
+Initialization: Proper initialization and quit handling for Pygame.
+
+6. Detailed Implementation
+6.1. Initialization and Setup
+Initialize Pygame and set up the display window.
+Define colors, fonts, and clock for controlling the game loop.
+
+6.2. Player Class
+Initialize player position, stats (hunger, thirst, energy), inventory.
+Handle movement, combat, and interaction with the environment.
+
+6.3. Environment Class
+Generate a diverse map with different biomes, weather effects, and dynamic elements by noise in theme apocalypse.
+Populate with resources, wildlife, and points of interest (ruins, bunkers, etc.).
+
+6.4. Story and Choices
+Design a branching storyline with multiple endings based on player decisions.
+Implement dialogues, events, and narrative triggers.
+
+6.5. Main Game Loop
+Handle user input (mouse clicks, key presses) for player movement and interaction.
+Update player stats based on actions, time passage, and environmental factors.
+Draw the game world, player, base, resources, and UI elements.
+Manage events, combat encounters, and base management.
+
+7 devolopment
+write by OOP and Class to easy to dev and management
+make it fast to render and data stucrutre for more update
+
+
+Movement Speed:
+    5 km/h (normal walking speed)
+    This translates to about 0.01389 pixels per second in your 100m/pixel scale
+
+Hunger:
+    Decrease rate: 1.5% per hour
+
+Thirst:
+    Decrease rate: 3.5% per hour
+
+Energy:
+    Decrease rate while walking: 10% per hour
+    Replenish rate during light activity (not moving): 7.5% per hour
+    Recovery rate when resting: 17.5% per hour
+    Recovery rate when sleeping: 35% per hour
+
+Health:
+    Natural regeneration rate: 0.5% per hour (when below 100%)
+    Decrease rate when starving or dehydrated: 2% per hour
+    Resource Consumption:
+    Eating food: Restores 25% hunger per food item
+    Drinking water: Restores 35% thirst per water item
+    Sleep:
+
+Energy recovery: 35% per hour
+    Health recovery: 1.5% per hour
