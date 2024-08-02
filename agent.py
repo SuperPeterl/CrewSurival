@@ -1,9 +1,12 @@
 import os
+os.environ["SERPER_API_KEY"] = "75fb28de5dac4a2ef7f2fe9322ec9277b3ee1f5e"  # serper.dev API key
+os.environ["EXA_API_KEY"] = "bf4f9f68-845e-4185-9088-db9ca95658ef"
+os.environ["OPENAI_API_KEY"] = "sk-proj-1LylPhLMrvJLtVMqYDtGT3BlbkFJuJGr2pxwQ5V4D30DCp38"
 
 from crewai import Agent,Task,Crew
 from langchain_groq import ChatGroq
 
-llmx = ChatGroq(api_key="",
+llmx = ChatGroq(api_key="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",
                 model= "llama3-groq-70b-8192-tool-use-preview")
 from crewai_tools import TXTSearchTool
 # Define your agents with roles and goals
@@ -125,7 +128,6 @@ class PlayerAgent:
             * move_down
             * search
             * use
-
             # Responses
             
             You must supply your responses in the form of list of string .  Your responses will specify which of the above actions you intend to take.

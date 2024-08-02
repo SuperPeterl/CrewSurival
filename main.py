@@ -119,12 +119,13 @@ class Game:
             if player.health <= 0:
                 self.last_action = "You died"
                 self.players.remove(player)
-                self.current_player_index = (self.current_player_index + 1) % len(self.players)
+                if len(self.players) == 0:
+                    print("Game Over")
+                    return False
+                self.current_player_index = 0
                 print(f"Now controlling {self.players[self.current_player_index].name}")
-        if len(self.players) == 0:
-            print("Game Over")
-            return False
         return True
+    
     #check player is idle and do action when done pop fist action from list
     def player_do_actions(self):
         current_player = self.players[self.current_player_index]
