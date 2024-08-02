@@ -1,7 +1,4 @@
 import os
-os.environ["SERPER_API_KEY"] = ""  # serper.dev API key
-os.environ["EXA_API_KEY"] = ""
-os.environ["OPENAI_API_KEY"] = ""
 
 from crewai import Agent,Task,Crew
 from langchain_groq import ChatGroq
